@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white bg-opacity-40">
             <img width="24px" src="/assets/instagram-pink.svg" alt="" />
+            
           </div>
         </div>
       </div>
