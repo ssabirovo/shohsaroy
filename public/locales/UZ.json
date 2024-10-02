@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "SOKINLIKDA YASHAB,ROHATLANING!",
+    "description": "Shohsaroy uylari - Sizning shohona uyingiz!",
+    "form":{
+      "title": "Bog’lanish uchun ma’lumotlarni qoldiring",
+      "nameLabel": "Ism",
+      "namePlaceholder": "Ismingizni kiriting",
+      "phoneLabel": "Tel. raqam",
+      "phonePlaceholder": "Telfon raqamni kiriting",
+      "submit": "Tasdiqlash"
+    }
+  },
+  "about":{
+    "for":"Siz uchun",
+    "special":"maxsus",
+    "offers":"takliflar",
+    "start":"Boshlang'ich",
+    "payment":"to'lov",
+    "discount":"Chegirma",
+    "months":"36",
+    "till":"Oygacha",
+    "offer1":"30% boshlang'ich to'lov evaziga xonadon",
+    "offer2":"36 oyga foizsiz ipoteka, faqat pasport evaziga",
+    "offer3":"100% to'lov uchun 25% mega chegirma",
+
+    "title":"Biz haqimizda",
+    "description1":"SHOHSAROY UYLARI - shohona uylarni quruvchi va qurilish bozorida yetakchi bo'lgan kompaniya",
+    "description2":"Turkiya va Germaniya texnologiyalari asosida qurilayotgan har bir uyimiz - ishonchga sazovor",
+    "score1":"Qurilish sohasida 10 yillik tajriba",
+    "score2":"3 ta muvaffaqiyatli topshirilgan loyiha",
+    "score3":"24/7 qo'riqlanadigan xudud",
+    "score4":"Xususiy bog'cha va Maktab",
+    "score5":"Supermarket va bozorlarga yaqin"
+  },
+  "location":{
+    "title":"Manzil va kontaktlar",
+    "description":"Manzil",
+    "address":"Toshkent shahar, Yashnobod tumani, Uysozlar ko’chasi, 7/3"
+
+  }
+}

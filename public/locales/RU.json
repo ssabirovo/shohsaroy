@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Salom",
+    "form":{
+      "title": "rurururururu",
+      "nameLabel": "",
+      "namePlaceholder": "Salom",
+      "phoneLabel": "Salom",
+      "phonePlaceholder": "Salom"
+    }
+  }
+}
