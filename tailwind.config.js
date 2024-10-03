@@ -24,10 +24,12 @@ export default {
           "linear-gradient(135deg, rgba(239,191,4,1) 0%, rgba(255,245,158,1) 100%)",
         "gold-bg-gradient":
           "linear-gradient(320deg, rgba(239,191,4,1) 0%, rgba(255,245,158,1) 100%)",
+        "mirror-gradient":
+          "radial-gradient(circle at 45% 10% in hsl longer hue, #fff4 30%, #fff0 110%)",
       },
-      // boxShadow: {
-      //   "gold-palete": "box-shadow: 17px 17px 8px 0px 000",
-      // },
+      backdropBlur: {
+        transparent: "backdrop-filter: blur(3px);",
+      },
     },
   },
   plugins: [],

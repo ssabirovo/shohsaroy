@@ -41,7 +41,7 @@ const Location: React.FC = () => {
                   href="https://t.me/shohsaroy_uylari"
                   className="flex items-center rounded-3xl bg-telegram p-3"
                 >
-                  <b className="w-full">t.me/qala_uz</b>
+                  <b className="w-full">t.me/shohsaroy_uylari</b>
                   <img src="/assets/telegram.svg" alt="" />
                 </a>
                 <a
@@ -75,8 +75,8 @@ const Location: React.FC = () => {
               ></iframe>
             </div>
           </div>
-          <div className="flex w-full flex-col justify-between overflow-hidden rounded-3xl p-6 bg-pink-500 gap-5">
-            <div className="flex h-full items-center justify-start gap-4 ">
+          <div className="flex w-full flex-col justify-between gap-5 overflow-hidden rounded-3xl bg-pink-500 p-6">
+            <div className="flex h-full items-center justify-start gap-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white bg-opacity-40">
                 <img width="24px" src="/assets/instagram-pink.svg" alt="" />
               </div>
@@ -92,17 +92,17 @@ const Location: React.FC = () => {
               }}
             >
               <Carousel
-                className="w-full rounded-2xl overflow-hidden"
+                className="w-full overflow-hidden rounded-2xl"
                 effect="scrollx"
                 arrows
                 infinite
                 draggable
-                lazyLoad="ondemand"
+                lazyLoad="progressive"
                 autoplay
                 autoplaySpeed={4000}
               >
                 {images.map((src) => (
-                  <div>
+                  <div key={src}>
                     <a href="https://www.instagram.com/shohsaroyuylari/">
                       <img style={contentStyle} src={src} alt="" />
                     </a>

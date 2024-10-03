@@ -1,22 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { changeLanguage } from "i18next";
 import cx from "classnames";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeLang, setActiveLang] = useState(
-    localStorage.getItem("i18nextLng") || "UZ",
+  const [activeLang, setActiveLang] = useState<string>(
+    localStorage.getItem("i18nextLng") || "UZ", // Handle potential null value
   );
 
-  const changeLang = (lang: string) => {
+  const changeLang = (lang: string): void => {
     changeLanguage(lang);
     setActiveLang(lang);
   };
-  const changBackground = () => {
-    setScrolled(window.scrollY >= 80 ? true : false);
+
+  const changBackground = (): void => {
+    setScrolled(window.scrollY >= 80);
   };
 
-  window.addEventListener("scroll", changBackground);
+  // Use useEffect to handle side effect (scroll listener)
+  useEffect(() => {
+    window.addEventListener("scroll", changBackground);
+
+    // Clean up the event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", changBackground);
+    };
+  }, []);
 
   return (
     <div
@@ -25,7 +34,12 @@ const Navbar: React.FC = () => {
         scrolled && "bg-main",
       )}
     >
-      <nav className="flex w-full max-w-1200 items-center justify-between px-3 py-4 ">
+      <nav
+        className={cx(
+          "flex w-full max-w-1200 items-center justify-between px-3 py-7 transition-all",
+          scrolled && "!py-2",
+        )}
+      >
         <img src="/assets/logo.svg" className="w-[120px]" alt="" />
         <div className="flex gap-4">
           <a

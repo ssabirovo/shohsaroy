@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -6,11 +7,28 @@ const Hero: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Always good practice to prevent the default form submission behavior
-    console.log(e);
+    const formData = new FormData(e.target as HTMLFormElement);
+    const payload = Object.fromEntries(formData);
+
+    axios.post(
+      "https://service.app.uysot.uz/v1/external-source",
+      {
+        esType: "WEBSITE",
+        message: "https://shohsaroy.uz/#rec664088122",
+        name: payload?.name,
+        phoneNumber: payload?.phone,
+      },
+      {
+        headers: {
+          "X-Auth":
+            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5MyIsImV4cCI6Njc5OTgyMTg0OX0.-9lTMAIshpDjDw0TU0Z6itGyNrJ4Afu7Yvupir8tS3w",
+        },
+      },
+    );
   };
 
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-[url('/assets/hero-bg-2.png')] bg-cover bg-center max-lg:items-end max-sm:h-[110vh]">
+    <div className="flex h-screen w-full items-center justify-center bg-[url('/assets/hero-bg-2.png')] bg-cover bg-center max-lg:items-end max-sm:h-[135vh]">
       <div className="flex h-max w-full max-w-1200 items-start justify-between gap-14 px-3 py-4 max-lg:flex-col max-lg:items-center max-sm:h-full max-sm:gap-0 max-sm:p-0">
         <div className="text-white max-lg:text-center max-sm:hidden">
           <h1 className="text-5xl max-md:text-3xl">{t("hero.title")}</h1>
@@ -35,6 +53,7 @@ const Hero: React.FC = () => {
                 {t("hero.form.nameLabel")}
               </label>
               <input
+                name="name"
                 className="rounded p-2 text-main outline-main"
                 type="text"
                 id="name"
@@ -46,6 +65,7 @@ const Hero: React.FC = () => {
                 {t("hero.form.phoneLabel")}
               </label>
               <input
+                name="phone"
                 className="rounded p-2 text-main outline-main"
                 type="text"
                 id="phone"

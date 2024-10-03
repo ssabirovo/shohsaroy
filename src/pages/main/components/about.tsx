@@ -4,50 +4,69 @@ import { useTranslation } from "react-i18next";
 const About: React.FC = () => {
   const { t } = useTranslation();
 
+  const scores = [
+    {
+      img: "/assets/tick.png",
+      content: "about.score1",
+    },
+    {
+      img: "/assets/tick.png",
+      content: "about.score2",
+    },
+    {
+      img: "/assets/tick.png",
+      content: "about.score3",
+    },
+    {
+      img: "/assets/tick.png",
+      content: "about.score4",
+    },
+    {
+      img: "/assets/tick.png",
+      content: "about.score5",
+    },
+  ];
+
   return (
     <div className="flex w-full flex-col items-center justify-center bg-main bg-[url('/assets/about-bg.svg')] bg-cover bg-center">
-      <div className="flex w-full max-w-1200 items-end justify-between gap-20 overflow-hidden px-3 pb-20 pt-20 max-sm:flex-col max-sm:pt-48">
+      <div className="flex w-full max-w-1200 items-center justify-between gap-20 overflow-hidden px-3 pb-20 pt-20 max-sm:flex-col max-sm:pt-20">
         <div className="relative flex h-full w-full justify-center px-3">
-          <b className="text-center text-8xl text-white max-sm:text-7xl">
+          <b className="text-center text-8xl text-white max-sm:text-5xl">
             {t("about.for")}
             <br /> {t("about.special")} <br />
             {t("about.offers")}
           </b>
-          <div className="bg shadow-gold-palete absolute bottom-[85%] right-[-5%] h-max rotate-12 rounded bg-gold-border-gradient p-1 shadow-[14px_19px_8px_0px_rgba(0,0,0,0.26)] max-sm:bottom-[100%] max-sm:right-[0]">
-            <div className="flex flex-col rounded bg-gold-bg-gradient p-1 text-center">
-              <b className="text-5xl">{t("about.months")}</b>
-              <b className="text-2xl">{t("about.till")}</b>
-            </div>
-          </div>
-          <div className="bg shadow-gold-palete absolute bottom-[98%] right-[15%] h-max -rotate-12 rounded bg-gold-border-gradient p-1 shadow-[14px_19px_8px_0px_rgba(0,0,0,0.26)] max-sm:bottom-[110%] max-sm:right-[25%] max-sm:-rotate-6">
-            <div className="flex flex-col rounded bg-gold-bg-gradient p-1 text-center">
-              <b className="text-5xl">-25%</b>
-              <b className="text-2xl">{t("about.discount")}</b>
-            </div>
-          </div>
-          <div className="bg shadow-gold-palete absolute bottom-[100%] right-[38%] h-max -rotate-12 rounded bg-gold-border-gradient p-1 shadow-[14px_19px_8px_0px_rgba(0,0,0,0.26)] max-sm:bottom-[102%] max-sm:right-[60%]">
-            <div className="flex flex-col rounded bg-gold-bg-gradient p-1 text-center">
-              <b className="text-4xl">30%</b>
-              <b className="h-[22px] text-xl">{t("about.start")}</b>
-              <b className="h-[22px] text-xl">{t("about.payment")}</b>
-            </div>
-          </div>
         </div>
-        <div className="flex w-full flex-col justify-center gap-4 px-3 text-4xl max-sm:text-2xl">
-          <div className="w-full rounded bg-gold-border-gradient p-1">
-            <div className="rounded bg-gold-bg-gradient px-6 py-2">
-              <b>{t("about.offer1")}</b>
+        <div className="flex w-full flex-col justify-center gap-4 px-3 text-xl text-white max-sm:text-xl">
+          <div className="flex gap-3 max-sm:flex-col">
+            <div className="flex w-full flex-col items-start justify-start gap-8 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-sm:gap-5">
+              <img
+                className="max-sm:w-10"
+                height="70px"
+                src="/assets/passport.svg"
+                alt=""
+              />
+              <p>{t("about.offer2")}</p>
+            </div>
+            <div className="flex w-full flex-col items-start justify-start gap-8 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-sm:gap-5">
+              <img
+                className="max-sm:w-10"
+                height="70px"
+                src="/assets/discount.svg"
+                alt=""
+              />
+
+              <p>{t("about.offer1")}</p>
             </div>
           </div>
-          <div className="w-full rounded bg-gold-border-gradient p-1">
-            <div className="rounded bg-gold-bg-gradient px-6 py-2">
-              <b>{t("about.offer2")}</b>
-            </div>
-          </div>
-          <div className="w-full rounded bg-gold-border-gradient p-1">
-            <div className="rounded bg-gold-bg-gradient px-6 py-2">
-              <b>{t("about.offer3")}</b>
-            </div>
+          <div className="flex h-full w-full flex-col items-start justify-start gap-8 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-sm:gap-5">
+            <img
+              className="max-sm:w-10"
+              height="70px"
+              src="/assets/coin.svg"
+              alt=""
+            />
+            <p>{t("about.offer3")}</p>
           </div>
         </div>
       </div>
@@ -65,26 +84,12 @@ const About: React.FC = () => {
             {t("about.description1")} <br /> {t("about.description2")}
           </p>
           <div className="flex flex-col gap-4 text-lg">
-            <div className="flex items-center gap-4">
-              <img src="/assets/tick.png" alt="" />
-              <b>{t("about.score1")}</b>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src="/assets/tick.png" alt="" />
-              <b>{t("about.score2")}</b>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src="/assets/tick.png" alt="" />
-              <b>{t("about.score3")}</b>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src="/assets/tick.png" alt="" />
-              <b>{t("about.score4")}</b>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src="/assets/tick.png" alt="" />
-              <b>{t("about.score5")}</b>
-            </div>
+            {scores.map(({ content, img }) => (
+              <div key={content} className="flex items-center gap-4">
+                <img src={img} alt="" />
+                <b>{t(content)}</b>
+              </div>
+            ))}
           </div>
         </div>
       </div>
