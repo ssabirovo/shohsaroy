@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        gteestiprodisplay: ["gteestiprodisplay", "sans-serif"],
+      },
       maxWidth: {
         1200: "1200px",
       },
@@ -26,6 +29,8 @@ export default {
           "linear-gradient(320deg, rgba(239,191,4,1) 0%, rgba(255,245,158,1) 100%)",
         "mirror-gradient":
           "radial-gradient(circle at 45% 10% in hsl longer hue, #fff4 30%, #fff0 110%)",
+        "mirror-gradient2":
+          "radial-gradient(circle at 55% 40% in hsl longer hue, #fff7 70%, #fff0 110%)",
       },
       backdropBlur: {
         transparent: "backdrop-filter: blur(3px);",

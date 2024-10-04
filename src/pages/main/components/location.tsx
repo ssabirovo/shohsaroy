@@ -75,7 +75,7 @@ const Location: React.FC = () => {
               ></iframe>
             </div>
           </div>
-          <div className="flex w-full flex-col justify-between gap-5 overflow-hidden rounded-3xl bg-pink-500 p-6">
+          <div className="flex w-full flex-col justify-between gap-5 overflow-hidden rounded-3xl bg-main p-6">
             <div className="flex h-full items-center justify-start gap-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white bg-opacity-40">
                 <img width="24px" src="/assets/instagram-pink.svg" alt="" />

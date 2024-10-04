@@ -1,8 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { CheckCircleFilled, CloseCircleFilled } from "@ant-design/icons";
+import {
+  CheckCircleFilled,
+  CloseCircleFilled,
+  UserOutlined,
+} from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
-import { notification } from "antd";
+import { Input, notification } from "antd";
 import "./hero.css";
 
 type typeOpenNotification = {
@@ -76,53 +80,51 @@ const Hero: React.FC = () => {
   return (
     <>
       {contextHolder}
-      <div className="flex h-screen w-full items-center justify-center bg-[url('/assets/hero-bg-2.png')] bg-cover bg-center max-lg:items-end max-sm:h-[135vh]">
-        <div className="flex h-max w-full max-w-1200 items-start justify-between gap-14 px-3 py-4 max-lg:flex-col max-lg:items-center max-sm:h-full max-sm:gap-0 max-sm:p-0">
-          <div className="text-white max-lg:text-center max-sm:hidden">
+      <div className="flex h-screen w-full items-center justify-center bg-[url('/assets/hero-bg-2.png')] bg-cover bg-center max-lg:items-end max-sm:h-[100vh] max-sm:bg-[url('/assets/hero-bg-mobile.png')]">
+        <div className="flex h-max w-full max-w-1200 items-start justify-between gap-14 px-3 py-4 max-lg:flex-col max-lg:items-center max-sm:h-full max-sm:gap-0">
+          <div className="text-white max-lg:text-center max-sm:mt-[150px]">
             <h1 className="text-5xl max-md:text-3xl">{t("hero.title")}</h1>
             <p className="text-2xl">{t("hero.description")}</p>
           </div>
-          <div className="hidden h-full w-full flex-col justify-end bg-main bg-[url('/assets/hero-bg-mobile.png')] bg-cover text-white max-sm:flex">
-            <div className="flex h-[50%] flex-col justify-end bg-black-gradient px-3 py-10">
-              <h1 className="text-3xl">{t("hero.title")}</h1>
-              <p className="text-base">{t("hero.description")}</p>
-            </div>
-          </div>
 
-          <div className="flex w-[35%] flex-col gap-5 rounded-2xl bg-main p-9 text-white max-md:w-[65%] max-sm:w-full max-sm:rounded-none max-sm:bg-[url('/assets/form-bg.svg')]">
-            <h1 className="max-md:text-1xl text-xl">{t("hero.form.title")}</h1>
+          <div className="bg-mirror-gradient2 flex w-[35%] flex-col gap-5 rounded-2xl p-9 text-white backdrop-blur-xl max-md:w-[65%] max-sm:w-[100%]">
+            <h1 className="max-md:text-1xl text-xl text-main">
+              {t("hero.form.title")}
+            </h1>
             <form
               onSubmit={handleSubmit}
               action=""
-              className="flex flex-col gap-2"
+              className="flex flex-col gap-4"
             >
               <div className="flex flex-col gap-1">
-                <label className="text-xl" htmlFor="name">
-                  {t("hero.form.nameLabel")}
-                </label>
-                <input
-                  name="name"
-                  className="rounded p-2 text-main outline-main"
-                  type="text"
+                <Input
                   id="name"
-                  placeholder={t("hero.form.namePlaceholder")}
+                  className="rounded-3xl border-2 border-transparent p-2 text-main hover:!border-phone focus:!border-phone"
+                  name="name"
+                  size="large"
+                  placeholder={t("hero.form.nameLabel")}
+                  prefix={<UserOutlined className="px-1" />}
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-xl" htmlFor="phone">
-                  {t("hero.form.phoneLabel")}
-                </label>
-                <input
+                <Input
+                  id="name"
+                  className="rounded-3xl border-2 border-transparent p-2 text-main hover:!border-phone focus:!border-phone"
                   name="phone"
-                  className="rounded p-2 text-main outline-main"
-                  type="text"
-                  id="phone"
-                  placeholder={t("hero.form.phonePlaceholder")}
+                  size="large"
+                  placeholder={t("hero.form.phoneLabel")}
+                  prefix={
+                    <img
+                      className="w-max px-1"
+                      src="/assets/phone-green.svg"
+                      alt=""
+                    />
+                  }
                 />
               </div>
               <button
                 disabled={isPosting}
-                className="mt-6 rounded border border-white bg-white p-2 text-main transition-all hover:bg-main hover:text-white"
+                className="rounded-3xl border border-white bg-white p-2 text-main transition-all hover:bg-main hover:text-white"
                 type="submit"
               >
                 {t("hero.form.submit")}

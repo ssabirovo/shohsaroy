@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Gteestiprodisplay";
+  src: url("/assets/fonts/GT-Eesti-Pro-Display/gteestiprodisplay_regular.otf");
+}
+
 * {
   scroll-behavior: smooth;
+}
+
+body * {
+  font-family: "Gteestiprodisplay";
 }
