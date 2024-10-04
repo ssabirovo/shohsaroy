@@ -25,6 +25,14 @@ const Hero: React.FC = () => {
 
   const intervalRef = useRef<number | undefined>(); // Use `number` instead of `NodeJS.Timeout`
 
+  const startInterval = () => {
+    clearInterval(intervalRef.current);
+
+    intervalRef.current = window.setInterval(() => {
+      setOpen(true);
+    }, 15000);
+  };
+
   useEffect(() => {
     intervalRef.current = window.setInterval(() => {
       setOpen(true);
@@ -59,6 +67,7 @@ const Hero: React.FC = () => {
 
   const closeModal = () => {
     setOpen(false);
+    startInterval();
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -129,8 +138,9 @@ const Hero: React.FC = () => {
         open={open}
         onOk={closeModal}
         onCancel={closeModal}
-        width="50%"
+        // width="50%"
         footer={<div className="h-0"></div>}
+        className="w-[50%]"
       >
         <div className="flex gap-5">
           {/* <div className="bg w-full rounded bg-[url('/assets/operator.jpg')] bg-cover bg-right text-transparent">
@@ -154,7 +164,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-col gap-1">
                 <Input
                   id="name"
-                  className="focus rounded-3xl border-2 border-gray-200 border-transparent p-2 text-main focus-within:!border-phone hover:!border-phone"
+                  className="focus rounded-3xl border-2 border-transparent bg-gray-100 p-2 text-main focus-within:!border-phone hover:!border-phone"
                   name="name"
                   size="large"
                   placeholder={t("hero.form.nameLabel")}
@@ -164,7 +174,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-col gap-1">
                 <Input
                   id="name"
-                  className="rounded-3xl border-2 border-gray-200 border-transparent p-2 text-main focus-within:!border-phone hover:!border-phone"
+                  className="rounded-3xl border-2 border-transparent bg-gray-100 p-2 text-main focus-within:!border-phone hover:!border-phone"
                   name="phone"
                   size="large"
                   placeholder={t("hero.form.phoneLabel")}
