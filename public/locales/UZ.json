@@ -39,9 +39,14 @@
     "address":"Toshkent shahar, Yashnobod tumani, Uysozlar ko’chasi, 7/3"
   },
   "notification":{
-    "successTitle":"Yuborildi!",
+    "phoneNotFoundTitle":"Telefon raqam kiritilmadi!",
+    "phoneNotFoundDescription":"Bog'lanishimiz mumkin bo'lgan telefon raqamingizni kiriting",
+    "nameNotFoundTitle":"Ism kiritilmadi!",
+    "nameNotFoundDescription":"Murojaat qilishimiz mumkin bo'lgan ismingizni kiriting",
+    "successTitle":"Yuborildi",
     "successDescription":"Sizning ma'lumotlaringiz yuborildi, tez orada operatorlarimiz siz bilan bo'glanishadi",
     "errorTitle":"Xatolik",
     "errorDescription":"Serverda xatolik yuz berdi, bir oz muddatdan so'ng yana bir bor urinib ko'ring"
+
   }
 }

@@ -1,4 +1,5 @@
 import axios from "axios";
+import cx from "classnames";
 import React, { useState } from "react";
 import {
   CheckCircleFilled,
@@ -28,7 +29,9 @@ const Hero: React.FC = () => {
     api.open({
       message: message,
       description: description,
-      duration: 5000,
+      pauseOnHover: true,
+      showProgress: true,
+
       icon: isSuccess ? (
         <CheckCircleFilled className="text-main" />
       ) : (
@@ -43,38 +46,55 @@ const Hero: React.FC = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const payload = Object.fromEntries(formData);
 
-    axios
-      .post(
-        "https://service.app.uysot.uz/v1/external-source",
-        {
-          esType: "WEBSITE",
-          message: "https://shohsaroy.uz/#rec664088122",
-          name: payload?.name,
-          phoneNumber: payload?.phone,
-        },
-        {
-          headers: {
-            "X-Auth":
-              "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5MyIsImV4cCI6Njc5OTgyMTg0OX0.-9lTMAIshpDjDw0TU0Z6itGyNrJ4Afu7Yvupir8tS3w",
-          },
-        },
-      )
-      .then(() => {
-        openNotification({
-          message: t("notification.successTitle"),
-          description: t("notification.successDescription"),
-          isSuccess: true,
-        });
-        setIsPosting(false);
-      })
-      .catch(() => {
-        openNotification({
-          message: t("notification.errorTitle"),
-          description: t("notification.errorDescription"),
-          isSuccess: false,
-        });
-        setIsPosting(false);
+    if (payload?.name == "") {
+      openNotification({
+        message: t("notification.nameNotFoundTitle"),
+        description: t("notification.nameNotFoundDescription"),
+        isSuccess: false,
       });
+      setIsPosting(false);
+    }
+    if (payload?.phone == "") {
+      openNotification({
+        message: t("notification.phoneNotFoundTitle"),
+        description: t("notification.phoneNotFoundDescription"),
+        isSuccess: false,
+      });
+      setIsPosting(false);
+    } else {
+      axios
+        .post(
+          "https://service.app.uysot.uz/v1/external-source",
+          {
+            esType: "WEBSITE",
+            message: "https://shohsaroy.uz/#rec664088122",
+            name: payload?.name,
+            phoneNumber: payload?.phone,
+          },
+          {
+            headers: {
+              "X-Auth":
+                "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5MyIsImV4cCI6Njc5OTgyMTg0OX0.-9lTMAIshpDjDw0TU0Z6itGyNrJ4Afu7Yvupir8tS3w",
+            },
+          },
+        )
+        .then(() => {
+          openNotification({
+            message: t("notification.successTitle"),
+            description: t("notification.successDescription"),
+            isSuccess: true,
+          });
+          setIsPosting(false);
+        })
+        .catch(() => {
+          openNotification({
+            message: t("notification.errorTitle"),
+            description: t("notification.errorDescription"),
+            isSuccess: false,
+          });
+          setIsPosting(false);
+        });
+    }
   };
 
   return (
@@ -99,7 +119,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-col gap-1">
                 <Input
                   id="name"
-                  className="rounded-3xl border-2 border-transparent p-2 text-main hover:!border-phone focus:!border-phone"
+                  className="focus rounded-3xl border-2 border-transparent p-2 text-main focus-within:!border-phone hover:!border-phone"
                   name="name"
                   size="large"
                   placeholder={t("hero.form.nameLabel")}
@@ -109,7 +129,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-col gap-1">
                 <Input
                   id="name"
-                  className="rounded-3xl border-2 border-transparent p-2 text-main hover:!border-phone focus:!border-phone"
+                  className="rounded-3xl border-2 border-transparent p-2 text-main focus-within:!border-phone hover:!border-phone"
                   name="phone"
                   size="large"
                   placeholder={t("hero.form.phoneLabel")}
@@ -124,7 +144,9 @@ const Hero: React.FC = () => {
               </div>
               <button
                 disabled={isPosting}
-                className="rounded-3xl border border-white bg-white p-2 text-main transition-all hover:bg-main hover:text-white"
+                className={cx(
+                  "rounded-3xl border-2 border-transparent bg-white p-2 text-main transition-all focus-within:!border-phone hover:!border-phone",
+                )}
                 type="submit"
               >
                 {t("hero.form.submit")}
