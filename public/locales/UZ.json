@@ -1,37 +1,38 @@
 {
   "hero": {
-    "title": " Sizning yangi uyingiz",
-    "description": "Shohsaroy uylari - Sizning shohona uyingiz!",
+    "title": " Shohsaroy uylari",
+    "description": "Sizning yangi uyingiz",
     "form":{
-      "title": "Bog’lanish uchun ma’lumotlarni qoldiring",
-      "nameLabel": "Ism",
+      "title": "Bog’lanish uchun ma’lumotlarni qoldiring",
+      "nameLabel": "Ism, fam",
       "namePlaceholder": "Ismingizni kiriting",
-      "phoneLabel": "Tel. raqam",
+      "phoneLabel": "Telefon raqam",
       "phonePlaceholder": "Telfon raqamni kiriting",
       "submit": "Tasdiqlash"
     }
   },
   "about":{
-    "for":"Siz uchun",
-    "special":"maxsus",
+    "for":"Shohsaroy kompaniyasi",
+    "special":"tomonidan",
     "offers":"takliflar",
     "start":"Boshlang'ich",
     "payment":"to'lov",
     "discount":"Chegirma",
     "months":"36",
     "till":"Oygacha",
-    "offer1":"30% boshlang'ich to'lov evaziga xonadon",
-    "offer2":"36 oyga foizsiz ipoteka, faqat pasport evaziga",
-    "offer3":"100% to'lov uchun 25% mega chegirma",
-
+    "offer1":"120mln so'm boshlang'ich to'lov evaziga xonadon",
+    "offer2":"30 oyga foizsiz bo'lib to'lash imkoniyati",
+    "offer3":"100% to'lov uchun, Remont sovg'a",
     "title":"Biz haqimizda",
-    "description1":"SHOHSAROY UYLARI - shohona uylarni quruvchi va qurilish bozorida yetakchi bo'lgan kompaniya",
+    "description1":"SHOHSAROY UYLARI - shohona uylarni quruvchi va qurilish bozorida yetakchi bo'lgan kompaniya.",
     "description2":"Turkiya va Germaniya texnologiyalari asosida qurilayotgan har bir uyimiz - ishonchga sazovor",
     "score1":"Qurilish sohasida 10 yillik tajriba",
-    "score2":"3 ta muvaffaqiyatli topshirilgan loyiha",
-    "score3":"24/7 qo'riqlanadigan xudud",
-    "score4":"Xususiy bog'cha va Maktab",
-    "score5":"Supermarket va bozorlarga yaqin"
+    "score2":"3 ta 100% topshirilgan loyihalar",
+    "score4":"1000 dan ortiq xonadonlar egalariga topshirilgan",
+    "score3":"24/7 qo'riqlanadigan hudud",
+    "score6":"Supermarket va bozorlarga yaqin",
+    "score7":"Xususiy bog'cha va Maktab",
+    "score5":"Yer usti va yer osti avtoturargohlar"
   },
   "location":{
     "title":"Manzil va kontaktlar",

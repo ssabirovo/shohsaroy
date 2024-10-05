@@ -31,7 +31,7 @@ const About: React.FC = () => {
     <div className="flex w-full flex-col items-center justify-center bg-main bg-[url('/assets/about-bg.svg')] bg-cover bg-center">
       <div className="flex w-full max-w-1200 items-center justify-between gap-20 overflow-hidden px-3 pb-20 pt-20 max-sm:flex-col max-sm:pt-20">
         <div className="relative flex h-full w-full justify-center px-3">
-          <b className="text-center text-8xl text-white max-sm:text-5xl">
+          <b className="text-center text-7xl text-white max-sm:text-5xl">
             {t("about.for")}
             <br /> {t("about.special")} <br />
             {t("about.offers")}
@@ -52,18 +52,17 @@ const About: React.FC = () => {
               <img
                 className="max-sm:w-10"
                 height="70px"
-                src="/assets/discount.svg"
+                src="/assets/coin.svg"
                 alt=""
               />
-
               <p>{t("about.offer1")}</p>
             </div>
           </div>
-          <div className="flex h-full w-full flex-col items-start justify-start gap-8 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-sm:gap-5">
+          <div className="flex h-full w-full flex-col items-start justify-start gap-8 rounded-2xl bg-mirror-gradient px-7 py-5 text-2xl backdrop-blur-xl max-sm:gap-5">
             <img
               className="max-sm:w-10"
               height="70px"
-              src="/assets/coin.svg"
+              src="/assets/gift.svg"
               alt=""
             />
             <p>{t("about.offer3")}</p>
