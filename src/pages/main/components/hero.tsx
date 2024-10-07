@@ -9,7 +9,6 @@ import {
 } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import { Input, Modal, notification } from "antd";
-import "./hero.css";
 
 type typeOpenNotification = {
   message: string;
@@ -36,7 +35,7 @@ const Hero: React.FC = () => {
   useEffect(() => {
     intervalRef.current = window.setInterval(() => {
       setOpen(true);
-    }, 15000);
+    }, 1115000);
 
     // Cleanup function to clear the interval when the component unmounts
     return () => {
