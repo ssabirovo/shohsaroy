@@ -29,13 +29,13 @@ const Hero: React.FC = () => {
 
     intervalRef.current = window.setInterval(() => {
       setOpen(true);
-    }, 15000);
+    }, 30000);
   };
 
   useEffect(() => {
     intervalRef.current = window.setInterval(() => {
       setOpen(true);
-    }, 1115000);
+    }, 30000);
 
     // Cleanup function to clear the interval when the component unmounts
     return () => {
@@ -207,7 +207,7 @@ const Hero: React.FC = () => {
             <p className="text-2xl">{t("hero.description")}</p>
           </div>
 
-          <div className="bg-mirror-gradient2 flex w-[35%] flex-col gap-5 rounded-2xl p-9 text-white backdrop-blur-xl max-md:w-[65%] max-sm:w-[100%]">
+          <div className="flex w-[35%] flex-col gap-5 rounded-2xl bg-mirror-gradient2 p-9 text-white backdrop-blur-xl max-md:w-[65%] max-sm:w-[100%]">
             <h1 className="max-md:text-1xl text-xl text-main">
               {t("hero.form.title")}
             </h1>

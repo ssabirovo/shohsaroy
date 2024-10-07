@@ -80,7 +80,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full max-w-1200 items-center justify-between gap-20 px-3 py-20 max-sm:flex-col-reverse max-sm:gap-10 max-sm:overflow-hidden">
+      <div className="flex w-full max-w-1200 items-center justify-between gap-20 px-3 py-20 max-md:flex-col-reverse max-sm:flex-col-reverse max-sm:gap-10 max-sm:overflow-hidden">
         <div className="flex w-full items-center gap-3 text-white">
           {/* <img
             className="max-sm:sc absolute bottom-0 right-0 max-w-[230%] origin-bottom transform max-sm:relative max-sm:max-w-[100%] max-sm:scale-[1.5] max-sm:scale-x-[-1.5]"
@@ -89,7 +89,7 @@ const About: React.FC = () => {
           /> */}
           <div className="flex w-full flex-col gap-3">
             {scores1.map(({ content, img }) => (
-              <div className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-sm:gap-5">
+              <div className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-md:px-4 max-md:py-2 max-sm:gap-5">
                 <img className="h-11 w-auto max-sm:w-10" src={img} alt="" />
                 <p>{t(content)}</p>
               </div>
@@ -97,7 +97,7 @@ const About: React.FC = () => {
           </div>
           <div className="flex w-full flex-col gap-3">
             {scores2.map(({ content, img }) => (
-              <div className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-sm:gap-5">
+              <div className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-md:px-4 max-md:py-2 max-sm:gap-5">
                 <img className="h-11 w-auto max-sm:w-10" src={img} alt="" />
                 <p>{t(content)}</p>
               </div>
@@ -109,12 +109,11 @@ const About: React.FC = () => {
           <p className="text-lg text-gray-200">
             {t("about.description1")} <br /> {t("about.description2")}
           </p>
-
           <a
             href="tel:+998555049999"
-            className="px4 flex w-max items-center gap-3 rounded-3xl bg-phone p-3"
+            className="px4 flex w-max items-center gap-3 rounded-3xl bg-phone p-3 max-sm:w-full"
           >
-            <b className="text-3xl px-4">Bog'lanish</b>
+            <b className="px-4 text-3xl max-sm:w-full">Bog'lanish</b>
             <div className="rounded-2xl bg-white bg-opacity-40 p-3">
               <img className="w-6" src="/assets/phone.svg" alt="" />
             </div>
