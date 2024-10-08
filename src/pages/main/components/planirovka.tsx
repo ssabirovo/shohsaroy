@@ -14,6 +14,9 @@ const Planirovka: React.FC = () => {
     "planirovka.room3",
     "planirovka.room4",
   ];
+
+  const sizes = ["46.78", "58.14", "87.84", "116.81"];
+
   const { t } = useTranslation();
   return (
     <div className="flex w-full flex-col items-center justify-center">
@@ -21,8 +24,9 @@ const Planirovka: React.FC = () => {
         <div className="flex w-full flex-col justify-between gap-10">
           <h1 className="text-5xl text-main">{t("planirovka.title")}</h1>
 
-          <b className="text-center text-7xl text-main">
-            {t("planirovka.room1")} <br /> 12x23
+          <b className="text-center text-7xl text-main max-sm:text-5xl">
+            {t("planirovka.room1")} <br /> {sizes[activeRoom]}
+            <sup>2</sup>
           </b>
           <div className="flex flex-col gap-3">
             <div className="flex justify-center gap-3">
@@ -30,7 +34,7 @@ const Planirovka: React.FC = () => {
                 <button
                   onClick={() => setActiveRoom(index)}
                   className={cx(
-                    "w-full rounded-full border-2 border-main px-3 py-2 text-lg transition-all",
+                    "w-full rounded-full border-2 border-main px-3 py-2 text-lg transition-all max-sm:text-sm",
                     index == activeRoom &&
                       "w-[200%] bg-main text-white outline outline-4 outline-green-200",
                   )}
@@ -48,18 +52,18 @@ const Planirovka: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex w-full gap-4 flex-col">
+        <div className="flex w-full flex-col gap-4">
           <img
             className="w-[100%] rounded-3xl max-md:w-full"
             src={`/assets/${activeRoom + 1}-xona.png`}
             alt=""
           />
-          <div className="btn btn-group hidden items-center rounded-full bg-phone p-3 text-white max-md:flex">
+          <a className="btn btn-group hidden items-center rounded-full bg-phone p-3 text-white max-md:flex">
             <p className="w-full text-center text-xl">Batafsil ma'lumot</p>
             <div className="rounded-full bg-white bg-opacity-40 p-3">
               <img className="w-6" src="/assets/phone.svg" alt="" />
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
