@@ -48,5 +48,12 @@
     "successDescription":"Sizning ma'lumotlaringi yuborildi, tez orada operatorlarimiz siz bilan bo'glanishadi",
     "errorTitle":"Xatolik",
     "errorDescription":"Serverda xatolik yuz berdi, bir oz muddatdan so'n yana bir bor urinib ko'ring"
+  },
+  "planirovka":{
+    "title":"Планировка",
+    "room1":"1 комната",
+    "room2":"2 комнаты",
+    "room3":"3 комнаты",
+    "room4":"4 комнаты"
   }
 }
