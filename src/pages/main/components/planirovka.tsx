@@ -25,7 +25,7 @@ const Planirovka: React.FC = () => {
           <h1 className="text-5xl text-main">{t("planirovka.title")}</h1>
 
           <b className="text-center text-7xl text-main max-sm:text-5xl">
-            {t("planirovka.room1")} <br /> {sizes[activeRoom]}
+            {t(`planirovka.room${activeRoom + 1}`)} <br /> {sizes[activeRoom]}
             <sup>2</sup>
           </b>
           <div className="flex flex-col gap-3">

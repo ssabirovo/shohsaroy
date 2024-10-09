@@ -11,11 +11,12 @@ const Location: React.FC = () => {
   };
 
   const images = [
-    "/assets/instagram1.png",
-    "/assets/instagram2.jpg",
-    "/assets/instagram3.jpg",
-    "/assets/instagram4.jpg",
-    "/assets/instagram5.jpg",
+    "/assets/2.jpg",
+    "/assets/5.jpg",
+    "/assets/6.jpg",
+    "/assets/15.jpg",
+    "/assets/16.jpg",
+    "/assets/18.jpg",
   ];
 
   return (
@@ -41,7 +42,7 @@ const Location: React.FC = () => {
                   href="https://t.me/shohsaroy_uylari"
                   className="flex items-center rounded-3xl bg-telegram p-3"
                 >
-                  <b className="w-full">t.me/shohsaroy_uylari</b>
+                  <b className="w-full">shohsaroy_uylari</b>
                   <img src="/assets/telegram.svg" alt="" />
                 </a>
                 <a

@@ -8,8 +8,8 @@ const Main: React.FC = () => {
       <Phone />
       <Navbar />
       <Hero />
-      <About />
       <Planirovka />
+      <About />
       <Location />
       <Footer />
     </div>
