@@ -22,7 +22,7 @@
     "till":"Oygacha",
     "offer1":"120mln so'm boshlang'ich to'lov evaziga xonadon",
     "offer2":"30 oyga foizsiz bo'lib to'lash imkoniyati",
-    "offer3":"100% to'lov uchun, Remont sovg'a",
+    "offer3":"100% tolov uchun, tayyor tamirlangan xonadonlar",
     "title":"Biz haqimizda",
     "description1":"SHOHSAROY UYLARI - shohona uylarni quruvchi va qurilish bozorida yetakchi bo'lgan kompaniya.",
     "description2":"Turkiya va Germaniya texnologiyalari asosida qurilayotgan har bir uyimiz - ishonchga sazovor",
@@ -50,7 +50,7 @@
     "errorDescription":"Serverda xatolik yuz berdi, bir oz muddatdan so'ng yana bir bor urinib ko'ring"
   },
   "planirovka":{
-    "title":"Joylashuv",
+    "title":"Xonalar joylashuv",
     "room1":"1 xonali",
     "room2":"2 xonali",
     "room3":"3 xonali",
