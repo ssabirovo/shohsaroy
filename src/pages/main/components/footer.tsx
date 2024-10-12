@@ -26,6 +26,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
+      
     </div>
   );
 };

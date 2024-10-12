@@ -43,12 +43,15 @@ const Planirovka: React.FC = () => {
                 </button>
               ))}
             </div>
-            <div className="btn btn-group flex items-center rounded-full bg-phone p-3 text-white max-md:hidden">
+            <a
+              href="tel:+998555049999"
+              className="btn btn-group flex items-center rounded-full bg-phone p-3 text-white max-md:hidden"
+            >
               <p className="w-full text-center text-xl">Batafsil ma'lumot</p>
               <div className="rounded-full bg-white bg-opacity-40 p-3">
                 <img className="w-6" src="/assets/phone.svg" alt="" />
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
