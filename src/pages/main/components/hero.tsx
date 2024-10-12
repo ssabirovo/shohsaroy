@@ -29,13 +29,13 @@ const Hero: React.FC = () => {
 
     intervalRef.current = window.setInterval(() => {
       setOpen(true);
-    }, 300000);
+    }, 30000);
   };
 
   useEffect(() => {
     intervalRef.current = window.setInterval(() => {
       setOpen(true);
-    }, 300000);
+    }, 30000);
 
     // Cleanup function to clear the interval when the component unmounts
     return () => {
