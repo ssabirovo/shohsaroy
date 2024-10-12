@@ -88,16 +88,22 @@ const About: React.FC = () => {
             alt=""
           /> */}
           <div className="flex w-full flex-col gap-3">
-            {scores1.map(({ content, img }) => (
-              <div className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-md:px-4 max-md:py-2 max-sm:gap-5">
+            {scores1.map(({ content, img }, index) => (
+              <div
+                key={index}
+                className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-md:px-4 max-md:py-2 max-sm:gap-5"
+              >
                 <img className="h-11 w-auto max-sm:w-10" src={img} alt="" />
                 <p>{t(content)}</p>
               </div>
             ))}
           </div>
           <div className="flex w-full flex-col gap-3">
-            {scores2.map(({ content, img }) => (
-              <div className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-md:px-4 max-md:py-2 max-sm:gap-5">
+            {scores2.map(({ content, img }, index) => (
+              <div
+                key={index}
+                className="flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-mirror-gradient px-7 py-5 backdrop-blur-xl max-md:px-4 max-md:py-2 max-sm:gap-5"
+              >
                 <img className="h-11 w-auto max-sm:w-10" src={img} alt="" />
                 <p>{t(content)}</p>
               </div>

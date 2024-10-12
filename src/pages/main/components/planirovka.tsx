@@ -32,6 +32,7 @@ const Planirovka: React.FC = () => {
             <div className="flex justify-center gap-3">
               {btns.map((content, index) => (
                 <button
+                  key={index}
                   onClick={() => setActiveRoom(index)}
                   className={cx(
                     "w-full rounded-full border-2 border-main px-3 py-2 text-lg transition-all max-sm:text-sm",

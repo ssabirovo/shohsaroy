@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import { Input, Modal, notification } from "antd";
+import ProgressiveBackground from "../../../components/progressive-background";
 
 type typeOpenNotification = {
   message: string;
@@ -200,7 +201,12 @@ const Hero: React.FC = () => {
         </div>
       </Modal>
       {contextHolder}
-      <div className="flex h-screen w-full items-center justify-center bg-[url('/assets/hero-bg-2.png')] bg-cover bg-center max-lg:items-end max-sm:h-[100vh] max-sm:bg-[url('/assets/hero-bg-mobile.png')]">
+
+      <ProgressiveBackground
+        lowResImage="/assets/low-res-hero-bg.png"
+        highResImage="/assets/hero-bg-2.png"
+        className="flex h-screen w-full items-center justify-center bg-[url('/assets/low-res-hero-bg.png')] bg-cover bg-center max-lg:items-end max-sm:h-[100vh] max-sm:bg-[url('/assets/hero-bg-mobile.png')]"
+      >
         <div className="flex h-max w-full max-w-1200 items-start justify-between gap-14 px-3 py-4 max-lg:flex-col max-lg:items-center max-sm:h-full max-sm:gap-0">
           <div className="text-white max-lg:text-center max-sm:mt-[150px]">
             <h1 className="text-5xl max-md:text-3xl">{t("hero.title")}</h1>
@@ -254,7 +260,7 @@ const Hero: React.FC = () => {
             </form>
           </div>
         </div>
-      </div>
+      </ProgressiveBackground>
     </>
   );
 };
