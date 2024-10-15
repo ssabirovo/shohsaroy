@@ -10,6 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { Input, Modal, notification } from "antd";
 import ProgressiveBackground from "../../../components/progressive-background";
+import NumericInput from "../../../components/numericInput";
 
 type typeOpenNotification = {
   message: string;
@@ -22,6 +23,7 @@ const Hero: React.FC = () => {
   const [api, contextHolder] = notification.useNotification();
   const [isPosting, setIsPosting] = useState(false);
   const [open, setOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   const intervalRef = useRef<number | undefined>(); // Use `number` instead of `NodeJS.Timeout`
 
@@ -172,20 +174,7 @@ const Hero: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <Input
-                  id="name"
-                  className="rounded-3xl border-2 border-transparent bg-gray-100 p-2 text-main focus-within:!border-phone hover:!border-phone"
-                  name="phone"
-                  size="large"
-                  placeholder={t("hero.form.phoneLabel")}
-                  prefix={
-                    <img
-                      className="w-max px-1"
-                      src="/assets/phone-green.svg"
-                      alt=""
-                    />
-                  }
-                />
+                <NumericInput onChange={setInputValue} value={inputValue} />
               </div>
               <button
                 disabled={isPosting}
@@ -233,20 +222,7 @@ const Hero: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <Input
-                  id="name"
-                  className="rounded-3xl border-2 border-transparent p-2 text-main focus-within:!border-phone hover:!border-phone"
-                  name="phone"
-                  size="large"
-                  placeholder={t("hero.form.phoneLabel")}
-                  prefix={
-                    <img
-                      className="w-max px-1"
-                      src="/assets/phone-green.svg"
-                      alt=""
-                    />
-                  }
-                />
+                <NumericInput onChange={setInputValue} value={inputValue} />
               </div>
               <button
                 disabled={isPosting}
